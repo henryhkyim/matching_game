@@ -9,3 +9,6 @@ Key component used including:
 - file read/write
 
 python version 3.8
+
+To execute:
+python3 matching.py
