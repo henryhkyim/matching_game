@@ -205,7 +205,7 @@ class GameBoard(Frame):
     _thread.start_new_thread(self.reset_buttons_in_a_sec, (currentPick, picked))
 
   def reset_buttons_in_a_sec(self, currentPick, picked):
-    time.sleep(1)
+    time.sleep(0.5)
     self.gamebuttons[int(currentPick)-1].reset_button()
     self.gamebuttons[int(picked)-1].reset_button()
 
@@ -220,6 +220,7 @@ class MatchingGame(Tk):
 if __name__ == '__main__':
   app = MatchingGame()
   app.title("Matching Game")
+  app.iconphoto(False, PhotoImage(file='hy-logo.png'))
   app.geometry('430x386') # size = 6
   # app.geometry('424x454') # size = 8
   app.mainloop()
